@@ -30,7 +30,7 @@ export FILE=$2
 export REPLACE=$3
 
 for item in $(cat $FILE); do
-   if [ -d "$item" ]; then
+   if [ -n "$item" ]; then
         project=$(echo "$item" | sed "s|"$REPLACE"||")
         echo "$project"
         git clone -b ${VERSION} https://github.com/oca/${project}
