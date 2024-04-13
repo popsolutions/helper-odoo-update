@@ -49,7 +49,7 @@ help()
 {
   echo -e "\n helper to deps of oca odoo \n"
   echo "get_all - clone all dependencies from branch with version"
-  echo "get_deps_folder - list folde and pass intem to file, sample: $0 get . a.txt $PWD"
+  echo "get_deps_folder - list folde and pass intem to file, sample: $0 get . a.txt $"PWD""
 }
 
 "$@"
