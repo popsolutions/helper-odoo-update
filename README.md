@@ -1,6 +1,23 @@
 # Helpers of Odoo
 
-This scripts helper odoo manager.
+This scripts helper odoo manager based in odoo install by turnkeylinux
+
+## How to use
+
+- Entener in `/opt` and clone project with name of help:
+
+```bash
+git clone https://github.com/popsolutions/helper-odoo-update help
+```
+- create folder of owner deps like oca
+
+```bash
+mkdir oca
+```
+
+- create deps in oca:
+
+
 
 ## Upgrade 
 
