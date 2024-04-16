@@ -9,15 +9,20 @@ This scripts helper odoo manager based in odoo install by turnkeylinux
 ```bash
 git clone https://github.com/popsolutions/helper-odoo-update help
 ```
-- create folder of owner deps like oca
+- create folder of owner deps like oca and enter in this folder
 
 ```bash
-mkdir oca
+mkdir oca && cd oca
 ```
 
-- create deps in oca:
+- create deps in oca file:
 
+```bash
+/opt/oca/web
+/opt/oca/website
+```
 
+- get deps with command: `../help/deps.sh clone 16.0 /opt/oca/deps.txt /opt/oca oca`
 
 ## Upgrade 
 
