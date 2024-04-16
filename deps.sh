@@ -31,10 +31,15 @@ export REPLACE=$3
 export OWNER=$4
 
 for item in $(cat $FILE); do
-   if [ -n "$item" ]; then
+    if [ -n "$item" ]; then
         project=$(echo "$item" | sed "s|"$REPLACE"||")
         echo "$project"
-        git clone -b ${VERSION} https://github.com/${OWNER}/${project}
+        if [ -d "$REPLACE/$project" ]; then
+          echo "--- download $OWNER/$project ---"
+        else
+          echo "clone from $OWNER/$project"
+          git clone -b ${VERSION} https://github.com/${OWNER}/${project}
+        fi
     fi
 done
 }
