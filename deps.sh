@@ -28,12 +28,13 @@ echo -e "deps of oca\n"
 export VERSION=$1
 export FILE=$2
 export REPLACE=$3
+export OWNER=$4
 
 for item in $(cat $FILE); do
    if [ -n "$item" ]; then
         project=$(echo "$item" | sed "s|"$REPLACE"||")
         echo "$project"
-        git clone -b ${VERSION} https://github.com/oca/${project}
+        git clone -b ${VERSION} https://github.com/${OWNER}/${project}
     fi
 done
 }
